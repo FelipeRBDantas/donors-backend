@@ -35,9 +35,11 @@ Backend CRUD API project to register Donor data.
 6. php artisan migrate
 ~~~
 
-## Testes
+## Tests
 
 * At the root of your project, import the "Insomnia_2022-03-14.json" collection into your imnsonia.
+* Flows: Register > Auth (Login) > Create Accounts > Create Transactions > Create Donors.
+* As we can see the flows, it is necessary to create a user, log in, pass the "Bearer [token]" header in the other requests, create a financial account, create a transaction with the uuid of the newly created financial account and finally create a donation with the uuid of the newly created user and transaction.
 
 ## Features
 
