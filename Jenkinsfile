@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar projeto') {
             steps {
-                git branch: 'main', url: 'https://github.com/FelipeRBDantas/cat-backend.git'
+                git branch: 'main', url: 'https://github.com/FelipeRBDantas/donors-backend.git'
             }
         }
         stage('Criar o arquivo .env') {
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Executar o bash') {
             steps {
-                powershell 'docker-compose exec -it the_cat_backend bash'
+                powershell 'docker-compose exec -it donors_backend bash'
             }
         }
         stage('Instalar dependências') {
